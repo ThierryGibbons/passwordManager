@@ -17,7 +17,7 @@ const crypto = require('crypto'),
 iv.copy(resizedIV);
 
 //  start sPass
-var sAks = new sPass.sPass();
+var pass = new sPass.sPass();
 
 if (argv.e && argv.key) {
     const key = crypto
@@ -38,9 +38,9 @@ if (argv.e && argv.key) {
 
     if (argv.s) {
       if (argv.user) {
-        sAks.s(argv.user, enc, argv.key, site);
+        pass.s(argv.user, enc, argv.key, site);
       } else {
-        sAks.s('doo', enc);
+        pass.s('doo', enc);
       }
       //  file saved
     }
@@ -73,4 +73,6 @@ if (argv.e && argv.key) {
 
   msg.push(cipher.final("hex"));
   console.log(msg.join(""));
+} else {
+  console.log('..');
 }

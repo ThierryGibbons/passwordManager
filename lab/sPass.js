@@ -3,7 +3,7 @@
 
 const fs = require('fs'); //  import fs to read & write to files.
 
-class saveAks { //  create a class to store functions
+class sPass { //  create a class to store functions
 
   //  save password function
   s(user, enc, pass, site) {
