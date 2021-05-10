@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF8">
+  <title>passwordManager</title>
+<body>
+
+  <p>password manager</p>
+
+  <script>
+    function submitButton() {
+      var user = document.getElementById("idUser");
+      var key = document.getElementById("idKey");
+
+      var user = prompt("user", "");
+      if (user!= null) {
+        document.getElementById("welcome").innerHTML =
+        "Welcome " + user + "\nPlease enter your key:";
+      }
+
+      console.log(user, "\n\n", key);
+    }
+  </script>
